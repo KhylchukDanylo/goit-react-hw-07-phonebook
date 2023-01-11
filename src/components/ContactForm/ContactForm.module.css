@@ -1,0 +1,11 @@
+.form {
+  background-color: teal;
+}
+.form__label {
+  background-color: red;
+}
+.form__input {
+}
+.form__btn {
+  background-color: red;
+}
