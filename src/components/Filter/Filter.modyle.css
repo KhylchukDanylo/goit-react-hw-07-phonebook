@@ -1,0 +1,19 @@
+.filter {
+  padding: 0 0 10px 0;
+  border-bottom: 2px solid black;
+}
+
+.filter__input {
+  margin-left: 10px;
+  width: 150px;
+  height: 20px;
+  border-radius: 5px;
+  transition-property: all;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.filter__input:hover,
+.filter__input:focus {
+  border-color: red;
+  background-color: rgba(0, 161, 161, 0.548);
+}

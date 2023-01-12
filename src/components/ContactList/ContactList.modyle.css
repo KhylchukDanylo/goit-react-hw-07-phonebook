@@ -1,0 +1,32 @@
+.list {
+  list-style-type: none;
+}
+.list__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 250px;
+  padding: 5px 0 5px 0;
+  border-bottom: 2px solid black;
+}
+.list__item:last-of-type {
+  border: none;
+}
+.list__item--text {
+  margin: 0 10px 0 0;
+}
+.list__btn {
+  width: 50px;
+  height: 25px;
+  border-color: teal;
+  border-radius: 5px;
+
+  transition-property: all;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.list__btn:focus,
+.list__btn:hover {
+  background-color: teal;
+  color: white;
+}

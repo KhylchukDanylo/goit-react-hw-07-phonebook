@@ -3,6 +3,7 @@ import { fetchContacts, deleteContact } from 'redux/operations';
 import { useEffect } from 'react';
 import { selectContacts, selectFilter } from 'redux/selectors';
 import { RotatingLines } from 'react-loader-spinner';
+import './ContactList.modyle.css';
 
 export default function ContactList() {
   const dispatch = useDispatch();
@@ -22,7 +23,7 @@ export default function ContactList() {
   const filteredContacts = getFilteredContacts();
 
   return (
-    <ul>
+    <ul className="list">
       {isLoading && (
         <RotatingLines
           strokeColor="red"
@@ -33,14 +34,17 @@ export default function ContactList() {
         />
       )}
       {error && <p>{error}</p>}
-      {contacts.length > 0 && <h3>Total contacts: {contacts.length}</h3>}
       {contacts.length > 0 &&
         filteredContacts.map(({ id, name, phone }) => (
-          <li key={id}>
-            <p>
+          <li className="list__item" key={id}>
+            <p className="list__item--text">
               {name}: {phone}
             </p>
-            <button type="button" onClick={() => dispatch(deleteContact(id))}>
+            <button
+              className="list__btn"
+              type="button"
+              onClick={() => dispatch(deleteContact(id))}
+            >
               Delete
             </button>
           </li>
